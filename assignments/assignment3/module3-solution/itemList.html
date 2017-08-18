@@ -2,6 +2,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th>Short Name</th>
         <th>Name</th>
         <th>Description</th>
         <th>Actions</th>
@@ -9,6 +10,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="item in list.items">
+        <td>{{ item.short_name }}</td>
         <td>{{ item.name }}</td>
         <td>{{ item.description }}</td>
         <td><button class="btn btn-default" ng-click="list.onRemove({index: $index});">Remove Item</button></td>
