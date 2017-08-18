@@ -32,17 +32,43 @@
   function NarrowItDownController(MenuSearchService) {
     var self = this;
     self.data = {
-      searchTerm: ''
+      searchTerm: '',
+      foundItems: []
     };
     self.searchMenu = function(searchTerm) {
       MenuSearchService.getMatchedMenuItems(searchTerm).then(function(items) {
-        console.log(items);
+        self.data.foundItems = items;
       });
+    };
+  }
+
+  function FoundItemsDirective() {
+    var ddo = {
+      templateUrl: 'itemList.html',
+      scope: {
+        items: '<',
+        searchTerm: '<',
+        onRemove: '&'
+      },
+      controller: FoundItemsDirectiveController,
+      controllerAs: 'list',
+      bindToController: true
+    }
+
+    return ddo;
+  }
+
+  function FoundItemsDirectiveController() {
+    var self = this;
+
+    self.founItemsInList = function () {
+      return (self.items <= 0);
     };
   }
 
   angular
     .module('NarrowItDownApp', [])
     .controller('NarrowItDownController', NarrowItDownController)
-    .service('MenuSearchService', MenuSearchService);
+    .service('MenuSearchService', MenuSearchService)
+    .directive('foundItems', FoundItemsDirective);
 }());

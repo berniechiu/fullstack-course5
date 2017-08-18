@@ -1,0 +1,19 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in list.items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td><button class="btn btn-default" ng-click="list.onRemove({index: $index});">Remove Item</button></td>
+      </tr>
+    <tbody>
+  </table>
+  <div class="error" ng-if="list.founItemsInList()">NOTHING DETECTED!</div>
+</div>
