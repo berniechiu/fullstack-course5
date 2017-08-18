@@ -35,13 +35,18 @@
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService) {
     var self = this;
+    self.state = {
+      submitting: false
+    };
     self.data = {
       searchTerm: '',
       foundItems: []
     };
     self.searchMenu = function(searchTerm) {
+      self.state.submitting = true
       MenuSearchService.getMatchedMenuItems(searchTerm).then(function(items) {
         self.data.foundItems = items;
+        self.state.submitting = false;
       });
     };
     self.removeMenu = function(itemIndex) {

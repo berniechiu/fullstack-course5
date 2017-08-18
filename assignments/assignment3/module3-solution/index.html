@@ -18,7 +18,12 @@
     </div>
 
     <!-- found-items should be implemented as a component -->
-    <found-items items="menuCtrl.data.foundItems" search-term="menuCtrl.data.searchTerm" on-remove="menuCtrl.removeMenu(index)"></found-items>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="loader" ng-if="menuCtrl.state.submitting"></div>
+        <found-items ng-if="!menuCtrl.state.submitting" items="menuCtrl.data.foundItems" search-term="menuCtrl.data.searchTerm" on-remove="menuCtrl.removeMenu(index)"></found-items>
+      </div>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="app.js"></script>
