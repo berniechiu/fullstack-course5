@@ -17,6 +17,10 @@
       return promise.then(filterItems);
     }
 
+    self.removeItem = function(itemIndex) {
+      return foundItems.splice(itemIndex, 1);
+    }
+
     function cacheItems(res) {
       allItems = res.data.menu_items;
       return allItems
@@ -40,6 +44,9 @@
         self.data.foundItems = items;
       });
     };
+    self.removeMenu = function(itemIndex) {
+      MenuSearchService.removeItem(itemIndex);
+    }
   }
 
   function FoundItemsDirective() {

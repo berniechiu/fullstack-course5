@@ -18,7 +18,7 @@
     </div>
 
     <!-- found-items should be implemented as a component -->
-    <found-items items="menuCtrl.data.foundItems" search-term="menuCtrl.data.searchTerm" on-remove=""></found-items>
+    <found-items items="menuCtrl.data.foundItems" search-term="menuCtrl.data.searchTerm" on-remove="menuCtrl.removeMenu(index)"></found-items>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="app.js"></script>
