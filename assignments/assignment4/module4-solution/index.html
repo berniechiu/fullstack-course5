@@ -4,16 +4,31 @@
     <title>Menu App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 <body ng-app="MenuApp">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="menu-title">BC's Restaurant Menu</h1>
+      </div>
+      <div class="col-sm-12">
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </div>
 
-
+  <!-- Libraries -->
   <script type="text/javascript" src="lib/angular.min.js"></script>
   <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
-  <script type="text/javascript" src="src/menuapp.module.js"></script>
-  <script type="text/javascript" src="src/data.module.js"></script>
-  <script type="text/javascript" src="src/menudata.service.js"></script>
-  <script type="text/javascript" src="src/categories.component.js"></script>
-  <script type="text/javascript" src="src/items.component.js"></script>
+  <!-- Modules -->
+  <script type="text/javascript" src="src/menuApp/menuapp.module.js"></script>
+  <script type="text/javascript" src="src/menuApp/data.module.js"></script>
+  <!-- Routes -->
+  <script type="text/javascript" type="text/javascript" src="src/routes.js"></script>
+  <!-- Module artifacts -->
+  <!-- <script type="text/javascript" src="src/menuApp/menudata.service.js"></script>
+  <script type="text/javascript" src="src/menuApp/categories.component.js"></script>
+  <script type="text/javascript" src="src/menuApp/items.component.js"></script> -->
 </body>
 </html>
