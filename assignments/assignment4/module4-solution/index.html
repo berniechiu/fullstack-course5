@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
 <body ng-app="MenuApp">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
         <h1 class="menu-title">BC's Restaurant Menu</h1>
+      </div>
+      <div class="col-sm-12 menu-btns">
+        <div class="btn-group" role="group">
+          <a class="btn btn-default" role="button" ui-sref="home">Home</a>
+          <a class="btn btn-default" role="button" ui-sref="categories">Categories</a>
+        </div>
       </div>
       <div class="col-sm-12">
         <ui-view></ui-view>
@@ -28,7 +34,7 @@
   <script type="text/javascript" type="text/javascript" src="src/routes.js"></script>
   <!-- Module artifacts -->
   <script type="text/javascript" src="src/menuApp/menudata.service.js"></script>
-  <!-- <script type="text/javascript" src="src/menuApp/categories.component.js"></script>
-  <script type="text/javascript" src="src/menuApp/items.component.js"></script> -->
+  <script type="text/javascript" src="src/menuApp/categories.component.js"></script>
+  <!-- <script type="text/javascript" src="src/menuApp/items.component.js"></script> -->
 </body>
 </html>

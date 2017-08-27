@@ -1,6 +1,21 @@
 .menu-title {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
+}
+
+.menu-btns {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.logo {
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+.item-list {
+  margin: 50px auto;
+  max-width: 500px;
 }
