@@ -2,14 +2,14 @@
   <table class="table table-bordered">
     <thead>
       <tr>
+        <th>Dish</th>
         <th>Short Name</th>
-        <th>Name</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="item in $ctrl.items">
-        <td>{{ item.short_name }}</td>
         <td>{{ item.name }}</td>
+        <td>{{ item.short_name }}</td>
       </tr>
     <tbody>
   </table>
